@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login_Form.LoginUI"
+             BackgroundColor="AliceBlue">
+    <ContentPage.Content>
+        <StackLayout Padding="30" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+            <Label Text="Welcome to"
+                   FontSize="32"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   TextColor="#d40827"
+                   FontAttributes="Bold"
+                   ></Label>
+
+            <Label Text="CHM Technology"
+                   FontSize="32"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   TextColor="#d40827"
+                   FontAttributes="Bold"
+                   ></Label>
+            <Image Source="arsenal.png" WidthRequest="120" HeightRequest="120"></Image>
+            
+            <Entry x:Name="txtUsername" Placeholder="Username" TextColor="Blue" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="Blue" PlaceholderColor="Gray"></Entry>
+
+            <Label Text="Invailid username or password !"
+                   x:Name="labelNotice"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   IsVisible="false"
+                   TextColor="Red"></Label>
+            
+            <Button
+                VerticalOptions="Center"
+                Text="Login"
+                TextColor="white"
+                BackgroundColor="Blue"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_Clicked">
+            
+            </Button>
+
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Don't have an account? " TextColor="Blue"/>
+                        <Span Text="Register" FontAttributes="Bold" TextColor="Blue" TextDecorations="Underline"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
