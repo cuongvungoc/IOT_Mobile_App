@@ -3,10 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Login_Form.RegisterPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Register Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="20">
+         
+            <Label Text="Register to"
+                   FontSize="32"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   TextColor="#d40827"
+                   FontAttributes="Bold"
+                   ></Label>
+
+            <Label Text="CHM Technology"
+                   FontSize="32"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   TextColor="#d40827"
+                   FontAttributes="Bold"
+                   ></Label>
+            <Image Source="arsenal.png" WidthRequest="120" HeightRequest="120"></Image>
+
+            <Entry x:Name="txt_email" Placeholder="Username" TextColor="Blue" PlaceholderColor="gray" Keyboard="Email"></Entry>
+            <Entry x:Name="txt_password" Placeholder="Password" IsPassword="True" TextColor="BLue" PlaceholderColor="gray"></Entry>
+            <Entry x:Name="txt_confirm" Placeholder="Confirm Password" IsPassword="True" TextColor="BLue" PlaceholderColor="gray"></Entry>
+            
+            <Button x:Name="btn_signup" Text="Sign Up" BackgroundColor="Blue" TextColor="White"
+                    Clicked="btn_signup_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
