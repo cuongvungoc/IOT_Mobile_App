@@ -11,7 +11,7 @@ using Xamarin.Forms.Xaml;
 namespace Login_Form
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class HomePage : TabbedPage
     {
         public HomePage()
         {

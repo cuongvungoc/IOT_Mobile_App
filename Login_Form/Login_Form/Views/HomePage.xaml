@@ -1,9 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Login_Form.HomePage">
-    <ContentPage.Content>
-        <StackLayout>
+             x:Class="Login_Form.HomePage"
+            NavigationPage.HasNavigationBar="False"
+            BarBackgroundColor="AliceBlue"
+            SelectedTabColor="Blue"
+            UnselectedTabColor="Gray"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+    
+    <ContentPage Title="Home" IconImageSource="arsenal.png">
+        <Label Text="Welcome to About Page"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"></Label>
+    </ContentPage>
+    
+    <ContentPage Title="History">
+        <Label Text="Welcome to Course Page"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"></Label>
+    </ContentPage>
+
+    <ContentPage Title="Management">
+        <Label Text="Welcome to Course Page"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"></Label>
+    </ContentPage>
+
+    <ContentPage Title="User">
+        <Label Text="Welcome to Course Page"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"></Label>
+    </ContentPage>
+</TabbedPage>
+
+
+
+<!--<StackLayout>
             <Label Text="Welcome to HomePage!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" 
@@ -21,6 +54,4 @@
                 </Label.FormattedText>
                 
             </Label>
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+        </StackLayout>-->

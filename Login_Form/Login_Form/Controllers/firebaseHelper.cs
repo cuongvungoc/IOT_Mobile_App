@@ -11,7 +11,7 @@ using Firebase.Database.Query;
 
 namespace Login_Form.Controllers
 {
-    class firebaseHelper
+    class FirebaseHelper
     {
         // Conect app with Firebase using API url
         public static FirebaseClient firebase = new FirebaseClient("AIzaSyAzUTYkFhecYELDf_01IWLg_8p4dz2DXVo");
@@ -69,6 +69,48 @@ namespace Login_Form.Controllers
             catch(Exception e)
             {
                 Debug.WriteLine($"Error: {e}");
+                return false;
+            }
+        }
+
+        // Update
+        public static async Task<bool> UpdateUser(string email, string password)
+        {
+            try
+            {
+                var toUpdateUser = (await firebase
+                    .Child("Users")
+                    .OnceAsync<Users>
+                    ()).Where(a => a.Object.Email == email).FirstOrDefault();
+                await firebase
+                .Child("Users")
+                .Child(toUpdateUser.Key)
+                .PatchAsync(new Users() { Email = email, Password = password });
+                return true;
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return false;
+            }
+        }
+
+        // Delete User   
+        public static async Task<bool> DeleteUser(string email)
+        {
+            try
+            {
+
+
+                var toDeletePerson = (await firebase
+                .Child("Users")
+                .OnceAsync<Users>()).Where(a => a.Object.Email == email).FirstOrDefault();
+                await firebase.Child("Users").Child(toDeletePerson.Key).DeleteAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
                 return false;
             }
         }
