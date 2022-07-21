@@ -3,32 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Login_Form.HomePage"
             NavigationPage.HasNavigationBar="False"
-            BarBackgroundColor="AliceBlue"
-            SelectedTabColor="Blue"
+            BarBackgroundColor="LightPink"
+            SelectedTabColor="Red"
             UnselectedTabColor="Gray"
+            xmlns:local="clr-namespace:Login_Form.Views"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom">
-    
-    <ContentPage Title="Home" IconImageSource="arsenal.png">
-        <Label Text="Welcome to About Page"
-               VerticalOptions="Center"
-               HorizontalOptions="Center"></Label>
-    </ContentPage>
-    
-    <ContentPage Title="History">
-        <Label Text="Welcome to Course Page"
+
+    <local:HomeTabbedPage Title="Home" IconImageSource="home.png">
+    </local:HomeTabbedPage>
+
+    <ContentPage Title="Statistical" IconImageSource="statistics.png">
+        <Label Text="Welcome to Statistical Page"
                VerticalOptions="Center"
                HorizontalOptions="Center"></Label>
     </ContentPage>
 
-    <ContentPage Title="Management">
-        <Label Text="Welcome to Course Page"
-               VerticalOptions="Center"
-               HorizontalOptions="Center"></Label>
-    </ContentPage>
+    <local:AccountTabbedPage Title="Account" IconImageSource="account.png">
 
-    <ContentPage Title="User">
-        <Label Text="Welcome to Course Page"
+    </local:AccountTabbedPage>    
+    
+    <ContentPage Title="Menu" IconImageSource="Menu">
+        <Label Text="Welcome to Menu Page"
                VerticalOptions="Center"
                HorizontalOptions="Center"></Label>
     </ContentPage>

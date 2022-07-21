@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LLQadXa6M9pv7PoN1bcvFAa9Wus0dWmuko2Uea13CCs8n5wmsnvj0CAdsUhKOm1gVWA7T8xxtWGXYtrJkK9fyQ==",
+  "dgSpecHash": "9eAJeiZZqq9rNMz2X+Ob/8gsufx7aDeD7aEjxrRi1ehuslne81NTBfx0qK1oslzCTh158w/dHGpglv7dbAx3ig==",
   "success": true,
   "projectFilePath": "F:\\20212\\LTUDDD\\Login_Form\\Login_Form\\Login_Form\\Login_Form.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,10 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\syncfusion.licensing\\20.2.0.36\\syncfusion.licensing.20.2.0.36.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\syncfusion.xamarin.core\\20.2.0.36\\syncfusion.xamarin.core.20.2.0.36.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\syncfusion.xamarin.sfgauge\\20.2.0.36\\syncfusion.xamarin.sfgauge.20.2.0.36.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.reactive\\4.0.0\\system.reactive.4.0.0.nupkg.sha512",

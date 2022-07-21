@@ -7,5 +7,6 @@ namespace Login_Form.Models
     class HomePageModel
     {
         public int PercentOfWater { get; set; } = 75;
+        public string WelcomeName { get; set; } = "Cuong";
     }
 }

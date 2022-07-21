@@ -16,3 +16,5 @@ F:\20212\LTUDDD\Login_Form\Login_Form\Login_Form\obj\Debug\netstandard2.0\Views\
 F:\20212\LTUDDD\Login_Form\Login_Form\Login_Form\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
 F:\20212\LTUDDD\Login_Form\Login_Form\Login_Form\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 F:\20212\LTUDDD\Login_Form\Login_Form\Login_Form\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+F:\20212\LTUDDD\Login_Form\Login_Form\Login_Form\obj\Debug\netstandard2.0\Views\HomeTabbedPage.xaml.g.cs
+F:\20212\LTUDDD\Login_Form\Login_Form\Login_Form\obj\Debug\netstandard2.0\Views\AccountTabbedPage.xaml.g.cs

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModel="clr-namespace:Login_Form.ViewModels"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="Login_Form.Views.HomeTabbedPage">
+    <ContentPage.BindingContext>
+        <viewModel:HomeTabbedViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid RowDefinitions="50,60,50,60,*" ColumnDefinitions="*,60" BackgroundColor="Transparent">
+            <Label Margin="10,0,0,0" Grid.Column="0" FontSize="30">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Welcome back, " TextColor="Gray"/>
+                        <Span Text="{Binding WelcomeName}" TextColor="#4f91fa"/>
+                    </FormattedString>
+                </Label.FormattedText>
+
+            </Label>
+
+            <CollectionView x:Name="collection" Margin="10,0,0,0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding DeviceData}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="5" HorizontalItemSpacing="5"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="20" BackgroundColor="LightCyan" HorizontalOptions="CenterAndExpand">
+                            <StackLayout Orientation="Vertical" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand">
+                                <Image HeightRequest="105" WidthRequest="105" BackgroundColor="#ffffff" Aspect="AspectFit" Source="{Binding Image}">
+                                    <Image.Clip>
+                                        <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
+                                    </Image.Clip>
+                                </Image>
+
+                                <Label Text="{Binding RoomName}" TextColor="Black" FontSize="18" FontAttributes="Bold"/>
+                                <Label Text="{Binding NumberDevice, StringFormat='{0} devices'}" TextColor="Black" FontSize="18"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <!--<Label Text="Air Conditioning"
+                   Grid.Row="1" 
+                   Grid.ColumnSpan="2"
+                   FontSize="24"></Label>
+            
+            <Label Text="Temperature" Grid.Row="2" Grid.Column="0"></Label>
+                <Button ImageSource="add.png" 
+                        HeightRequest="100" 
+                        WidthRequest="100" 
+                        Scale="0.05" 
+                        Grid.Row="2" 
+                        Grid.Column="1"
+                        Clicked="Button_Add_Clicked"></Button>
+                <Label x:Name="lblTemp" Text="{Binding PercentOfWater}" Grid.Row="2" Grid.Column="2"></Label>-->
+                <!--<Button ImageSource="minus.png" Scale="0.1" Grid.Row="0" Grid.Column="3"></Button>-->
+         
+            
+            <!--<gauge:SfCircularGauge Margin="10">
+                <gauge:SfCircularGauge.Scales>
+                    <gauge:Scale StartValue="0" EndValue="100">
+                        <gauge:Scale.Ranges>
+                            <gauge:Range StartValue="-40" EndValue="0" Color="#4f91fa" OuterStartOffset="0.85" OuterEndOffset="0.85" InnerStartOffset="0.65" InnerEndOffset="0.65" />
+                            <gauge:Range StartValue="0" EndValue="25" Color="#28bce4" OuterStartOffset="0.85" OuterEndOffset="0.85" InnerStartOffset="0.65" InnerEndOffset="0.65" />
+                            <gauge:Range StartValue="25" EndValue="50" Color="#0bbe53" OuterStartOffset="0.85" OuterEndOffset="0.85" InnerStartOffset="0.65" InnerEndOffset="0.65" />
+                            <gauge:Range StartValue="50" EndValue="75" Color="#d4d459" OuterStartOffset="0.85" OuterEndOffset="0.85" InnerStartOffset="0.65" InnerEndOffset="0.65" />
+                            <gauge:Range StartValue="75" EndValue="100" Color="#ff3233" OuterStartOffset="0.85" OuterEndOffset="0.85" InnerStartOffset="0.65" InnerEndOffset="0.65" />
+                        </gauge:Scale.Ranges>    
+                    </gauge:Scale>
+                </gauge:SfCircularGauge.Scales>
+            </gauge:SfCircularGauge>-->
+
+            <!--<Label Text="Light"
+                   FontSize="24"></Label>
+            <Switch OnColor="LightGreen"
+                    ThumbColor="Green"></Switch>
+
+            <Label Text="Welcome to Home Tabbed Page!"
+                   FontSize="35"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
