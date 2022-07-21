@@ -18,18 +18,8 @@ namespace Login_Form.Views
         {
             InitializeComponent();
             var vm = (HomeTabbedViewModel)BindingContext;
-            //if (vm != null)
-            //    vm.NavigationPage = Navigation;
-
-            //BindingContext = new HomeTabbedPage();
+            if (vm != null)
+                vm.NavigationPage = Navigation;
         }
-
-        //private void Button_Add_Clicked(object sender, EventArgs e)
-        //{
-        //    HomePageModel hpm = new HomePageModel();
-        //    hpm.PercentOfWater++;
-        //    //lblTemp.Text = "{Binding PercentOfWater}";
-        //    lblTemp.Text = hpm.PercentOfWater.ToString();
-        //}
     }
 }

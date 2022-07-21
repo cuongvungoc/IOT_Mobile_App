@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModel="clr-namespace:Login_Form.ViewModels"
+             Background="#fff"
+             BackgroundColor="#ffffff"
+             Title="{Binding Device.RoomName}"
+             x:Class="Login_Form.Views.DetailPage">
+    <ContentPage.BindingContext>
+        <viewModel:DetailViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Grid HorizontalOptions="CenterAndExpand">
+                <BoxView Grid.Row="0" HeightRequest="200" WidthRequest="200" CornerRadius="50">
+                    <BoxView.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#FAFF00" Offset="0.1"/>
+                            <GradientStop Color="#ff67e7" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                    <BoxView.Clip>
+                        <EllipseGeometry RadiusX="100" RadiusY="100" Center="100,100"/>
+                    </BoxView.Clip>
+                </BoxView>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

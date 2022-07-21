@@ -25,7 +25,10 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame CornerRadius="20" BackgroundColor="LightCyan" HorizontalOptions="CenterAndExpand">
+                        <Frame CornerRadius="20" BackgroundColor="{Binding BgColor}" HorizontalOptions="CenterAndExpand">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={x:Reference collection},Path=BindingContext.SelectItemCommand}" CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
                             <StackLayout Orientation="Vertical" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand">
                                 <Image HeightRequest="105" WidthRequest="105" BackgroundColor="#ffffff" Aspect="AspectFit" Source="{Binding Image}">
                                     <Image.Clip>

@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Login_Form.Views;
 
 namespace Login_Form
 {
@@ -13,6 +14,7 @@ namespace Login_Form
             //MainPage = new MainPage();
 
             MainPage = new NavigationPage(new LoginUI());
+            //HomeTabbedPage = new NavigationPage(new HomeTabbedPage());
         }
 
         protected override void OnStart()
