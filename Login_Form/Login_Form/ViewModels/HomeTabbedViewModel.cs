@@ -13,37 +13,37 @@ namespace Login_Form.ViewModels
     {
         public INavigation NavigationPage { get; set; }
         public string WelcomeName { get; set; } = "Cuong";
-        public ObservableCollection<DeviceModel> DeviceData { get; set; } = new ObservableCollection<DeviceModel>
+        public ObservableCollection<RoomModel> DeviceData { get; set; } = new ObservableCollection<RoomModel>
         {
-            new DeviceModel
+            new RoomModel
             {
                 Image="livingroom.png",
                 RoomName="LivingRoom",
                 NumberDevice="5",
                 BgColor="#F2D7D9",
             },
-            new DeviceModel
+            new RoomModel
             {
                 Image="kitchen.png",
                 RoomName="Kitchen",
                 NumberDevice="5",
                 BgColor="#9ADCFF",
             },
-            new DeviceModel
+            new RoomModel
             {
                 Image="bathroom.png",
                 RoomName="Bathroom",
                 NumberDevice="6",
                 BgColor="#A267AC"
             },
-            new DeviceModel
+            new RoomModel
             {
                 Image="bedroom.png",
                 RoomName="BedRoom",
                 NumberDevice="4",
                 BgColor="#99FEFF"
             },
-            new DeviceModel
+            new RoomModel
             {
                 Image="bedroom.png",
                 RoomName="Office",
@@ -62,7 +62,7 @@ namespace Login_Form.ViewModels
         {
             if (obj != null)
             {
-                var data = (DeviceModel)obj;
+                var data = (RoomModel)obj;
                 NavigationPage.PushAsync(new DetailPage(data));
             }
         }

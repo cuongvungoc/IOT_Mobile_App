@@ -9,9 +9,10 @@
         <viewModel:DetailViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <Grid HorizontalOptions="CenterAndExpand">
-                <BoxView Grid.Row="0" HeightRequest="200" WidthRequest="200" CornerRadius="50">
+        <Grid RowDefinitions="300,*" BackgroundColor="Transparent">
+            <Grid Grid.Row="0" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent">
+                <!--<BoxView Grid.Row="0" Grid.RowSpan="2" BackgroundColor="#FCD8D4" WidthRequest="350" HorizontalOptions="CenterAndExpand"/>-->
+                <BoxView Grid.Row="0" HeightRequest="300" WidthRequest="300" HorizontalOptions="CenterAndExpand">
                     <BoxView.Background>
                         <LinearGradientBrush EndPoint="1,0">
                             <GradientStop Color="#FAFF00" Offset="0.1"/>
@@ -19,10 +20,126 @@
                         </LinearGradientBrush>
                     </BoxView.Background>
                     <BoxView.Clip>
-                        <EllipseGeometry RadiusX="100" RadiusY="100" Center="100,100"/>
+                        <EllipseGeometry RadiusX="150" RadiusY="150" Center="150,150"/>
                     </BoxView.Clip>
                 </BoxView>
+
+                <BoxView Margin="20" Grid.Row="0" HeightRequest="260" WidthRequest="260" HorizontalOptions="CenterAndExpand" BackgroundColor="#fff">
+                    
+                    <BoxView.Clip>
+                        <EllipseGeometry RadiusX="130" RadiusY="130" Center="130,130"/>
+                    </BoxView.Clip>
+                </BoxView>
+                <StackLayout Orientation="Vertical">
+                    <Label FontSize="35" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding Temperature}" FontSize="90" FontAttributes="Bold" TextColor="#170055"/>
+                                <Span Text="°C" FontSize="60" TextColor="#170055"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Text="Room Temperature" Margin="0,0,0,30" FontSize="20" TextColor="#170055" HorizontalOptions="Center" VerticalOptions="FillAndExpand"/>
+                </StackLayout>
             </Grid>
-        </StackLayout>
+            
+            <ListView x:Name="UserListView"
+                  ItemsSource="{Binding users}"
+                  HasUnevenRows="True"
+                      Grid.Row="1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Image Source="{Binding Image}" HeightRequest="60" WidthRequest="60"/>
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding Email}" FontSize="Large"/>
+                                    <Label Text="{Binding Password}" FontSize="Medium"/>
+                                </StackLayout>
+                                <Switch x:Name="switch"
+                                        OnColor="Green"
+                                        IsToggled="{Binding Status}"></Switch>
+                                <StackLayout VerticalOptions="Center"
+                                             HorizontalOptions="EndAndExpand">
+                                    <Image Source="delete.png"
+                                           HeightRequest="30"
+                                           WidthRequest="30">
+                                    </Image>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!--<Grid Grid.Row="1">
+                <StackLayout Orientation="Horizontal" Margin="10">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                        <Image Source="airconditioner.png" HeightRequest="40" WidthRequest="40"/>
+                        <Label Text="Air Conditioner" FontSize="20"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand">
+                        <Label Text="Add"/>
+                        <Label Text="Minus"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="1" Margin="10">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                        <Image Source="light.png" HeightRequest="40" WidthRequest="40"/>
+                        <Label Text="Light" FontSize="20"/>
+                    </StackLayout>
+
+                    <Switch OnColor="Green"
+                            ThumbColor="Green"></Switch>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="2" Margin="10">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                        <Image Source="light.png" HeightRequest="40" WidthRequest="40"/>
+                        <Label Text="Light 2" FontSize="20"/>
+                    </StackLayout>
+
+                    <Switch OnColor="Green"
+                            ThumbColor="Green"></Switch>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="3" Margin="10">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                        <Image Source="fan.png" HeightRequest="40" WidthRequest="40"/>
+                        <Label Text="Fan" FontSize="20"/>
+                    </StackLayout>
+
+                    <Switch OnColor="Green"
+                            ThumbColor="Green"></Switch>
+                </StackLayout>
+            </Grid>-->
+        </Grid>
+            <!--<ListView Grid.Row="1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical">
+                                    <Image Source="airconditioner.png" HeightRequest="30" WidthRequest="30"/>
+                                    <Label Text="Air Conditioner"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="Add"/>
+                                    <Label Text="Minus"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                </ListView>--> 
+
+                <!--<StackLayout Orientation="Horizontal" Grid.Row="1">
+                <Label Text="Air Conditioner" Grid.Row="2" Grid.Column="0"/>
+                <Label Text="Air Conditioner" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Air Conditioner" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Air Conditioner" Grid.Row="2" Grid.Column="1"/>
+            </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>
+
+
+
+

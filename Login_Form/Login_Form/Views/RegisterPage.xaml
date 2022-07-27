@@ -22,12 +22,12 @@
                    ></Label>
             <Image Source="arsenal.png" WidthRequest="120" HeightRequest="120"></Image>
 
-            <Entry x:Name="Emailentery" Placeholder="Email" TextColor="Blue" PlaceholderColor="gray" Text="{Binding Email}" Keyboard="Email"></Entry>
-            <Entry x:Name="passwordentery" Placeholder="Password" IsPassword="True" TextColor="BLue" PlaceholderColor="gray" Text="{Binding Password}"></Entry>
-            <Entry x:Name="cfmpasswordentery" Placeholder="Confirm Password" IsPassword="True" TextColor="BLue" PlaceholderColor="gray" Text="{Binding ConfirmPassword}" ></Entry>
-            
+            <Entry x:Name="TxtEmail" Placeholder="Email" TextColor="Blue" PlaceholderColor="gray" />
+            <Entry x:Name="TxtPassword" Placeholder="Password" IsPassword="True" TextColor="BLue" PlaceholderColor="gray"/>
+            <Entry x:Name="TxtConfirm" Placeholder="Confirm Password" IsPassword="True" TextColor="BLue" PlaceholderColor="gray"/>
+
             <Button x:Name="btn_signup" Text="Sign Up" BackgroundColor="Blue" TextColor="White"
-                    Command="{Binding SignUpCommand}"></Button>
+                    Clicked="btn_signup_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

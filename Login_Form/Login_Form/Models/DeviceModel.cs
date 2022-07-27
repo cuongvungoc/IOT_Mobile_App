@@ -4,11 +4,10 @@ using System.Text;
 
 namespace Login_Form.Models
 {
-    public class DeviceModel
+    class DeviceModel
     {
-        public string RoomName { get; set; }
-        public string Image { get; set; }
-        public string NumberDevice { get; set; }
-        public string BgColor { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Status { get; set; }
     }
 }

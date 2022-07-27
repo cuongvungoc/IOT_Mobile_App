@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login_Form.Views.MenuView">
+    <ContentPage.Content>
+        <ListView x:Name="UserListView"
+                  ItemsSource="{Binding users}"
+                  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Image Source="{Binding Image}" HeightRequest="60" WidthRequest="60"/>
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding Email}" FontSize="Medium"/>
+                                <Label Text="{Binding Password}" FontSize="Medium"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

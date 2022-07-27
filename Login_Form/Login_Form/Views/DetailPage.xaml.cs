@@ -14,7 +14,8 @@ namespace Login_Form.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailPage : ContentPage
     {
-        public DetailPage(DeviceModel device)
+        UserRepoViewModel userReposity = new UserRepoViewModel();
+        public DetailPage(RoomModel device)
         {
             InitializeComponent();
             ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.White;
@@ -24,6 +25,11 @@ namespace Login_Form.Views
             {
                 vm.Device = device;
             }
+        }
+        protected override async void OnAppearing()
+        {
+            var users = await userReposity.GetAll();
+            UserListView.ItemsSource = users;
         }
     }
 }

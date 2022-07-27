@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Login_Form.Controllers;
+using Login_Form.Models;
+using Login_Form.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,55 +13,44 @@ namespace Login_Form
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : ContentPage
     {
-        RegisterController rs;
+        UserRepoViewModel reposity = new UserRepoViewModel();
         public RegisterPage()
         {
             InitializeComponent();
-            rs = new RegisterController();
-            // set Binding
-            BindingContext = rs;
         }
 
-        //private void btn_signup_Clicked(object sender, EventArgs e)
-        //{
-        //    string email = txt_email.Text;
-        //    string password = txt_password.Text;
-        //    string confirmPassword = txt_confirm.Text;
-
-        //    txt_email.BackgroundColor = Color.White;
-        //    txt_password.BackgroundColor = Color.White;
-        //    txt_confirm.BackgroundColor = Color.White;
-
-        //    if (String.IsNullOrEmpty(email))
-        //    {
-        //        txt_email.BackgroundColor = Color.Red;
-        //        DisplayAlert("Warning", "Type Email", "OK");
-        //        return;
-        //    }
-
-        //    else if (String.IsNullOrEmpty(password))
-        //    {
-        //        txt_password.BackgroundColor = Color.Red;
-        //        DisplayAlert("Warning", "Type Password", "OK");
-        //        return;
-        //    }
-
-        //    else if (String.IsNullOrEmpty(confirmPassword))
-        //    {
-        //        txt_confirm.BackgroundColor = Color.Red;
-        //        DisplayAlert("Warning", "Type Confirm Password", "OK");
-        //        return;
-        //    }
-
-        //    else if (password != confirmPassword)
-        //    {
-        //        DisplayAlert("Warning", "Password not match!", "OK");
-        //    }
-
-        //    else
-        //    {
-        //        DisplayAlert("Warning", "Successful registration!", "OK");
-        //    }
-        //}
+        private async void btn_signup_Clicked(object sender, EventArgs e)
+        {
+            string email = TxtEmail.Text;
+            string password = TxtPassword.Text;
+            string confirm = TxtConfirm.Text;
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            {
+                await DisplayAlert("Warning", "Please Enter", "Cancel");
+            }
+            else if (password != confirm)
+            {
+                await DisplayAlert("Warning", "Password and Confirm Password are not match", "Cancel");
+            }
+            else
+            {
+                DeviceModel device = new DeviceModel();
+                device.Name = email;
+                device.Status = password;
+                Task<bool> isSaved = reposity.SaveDevice(device);
+                //Users user = new Users();
+                //user.Email = email;
+                //user.Password = password;
+                //Task<bool> isSaved = reposity.Save(user);
+                if (await isSaved)
+                {
+                    await DisplayAlert("Infomation", "User has been saved", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Error", "User has not been saved", "OK");
+                }
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Login_Form.Models;
+//using uPLibrary.Networking.M2Mqtt;
 
 namespace Login_Form.Views
 {
@@ -20,7 +21,7 @@ namespace Login_Form.Views
 
             var sp = (StackLayout)this.ledcontent;
 
-            foreach(Button led in sp.Children)
+            foreach (Button led in sp.Children)
             {
                 led.Clicked += (s, e) =>
                 {
@@ -44,7 +45,7 @@ namespace Login_Form.Views
             //client.Subscribe(new string[] { topic }, new byte[] { 0 });
 
             //var sp = (StackLayout)this.ledcontent;
-            //foreach(Button led in sp.Children)
+            //foreach (Button led in sp.Children)
             //{
             //    led.Clicked += (s, e) =>
             //    {

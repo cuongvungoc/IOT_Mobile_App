@@ -12,7 +12,6 @@
 
     <local:HomeTabbedPage Title="Home" IconImageSource="home.png">
     </local:HomeTabbedPage>
-
     <ContentPage Title="Statistical" IconImageSource="statistics.png">
         <Label Text="Welcome to Statistical Page"
                VerticalOptions="Center"
@@ -21,13 +20,8 @@
 
     <local:AccountTabbedPage Title="Account" IconImageSource="account.png">
 
-    </local:AccountTabbedPage>    
-    
-    <ContentPage Title="Menu" IconImageSource="Menu">
-        <Label Text="Welcome to Menu Page"
-               VerticalOptions="Center"
-               HorizontalOptions="Center"></Label>
-    </ContentPage>
+    </local:AccountTabbedPage>
+    <local:MenuView Title="Menu" IconImageSource="Menu"/>
 </TabbedPage>
 
 

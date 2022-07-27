@@ -1,4 +1,7 @@
 FormsViewGroup.dll
+Syncfusion.Core.XForms.Android.dll
+Syncfusion.SfGauge.Android.dll
+Syncfusion.SfGauge.XForms.Android.dll
 Xamarin.AndroidX.Activity.dll
 Xamarin.AndroidX.Annotation.dll
 Xamarin.AndroidX.Annotation.Experimental.dll

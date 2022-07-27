@@ -9,9 +9,10 @@ namespace Login_Form.ViewModels
 {
     public class DetailViewModel : INotifyPropertyChanged
     {
-        private DeviceModel device;
+        private RoomModel device;
+        public string Temperature { get; set; } = "35";
 
-        public DeviceModel Device { get => device; set { device = value; NotifyPropertyChanged("Device"); } }
+        public RoomModel Device { get => device; set { device = value; NotifyPropertyChanged("Device"); } }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public DetailViewModel()
